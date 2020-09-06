@@ -1,0 +1,27 @@
+
+// create a dabase
+create database ecomercedb;
+
+// use db;
+use ecomercedb;
+select  database();
+
+// create a table 
+create table eproduct( p_id bigint primary key auto_increment , name varchar(100) , price decimal( 10,2) , 
+creation_date timestamp default now() , expire_date  timestamp default now() );
+show tables;
+
+desc eprodcut;
+
+// inset data into table
+insert into eproduct( name, price ) values ("Lenovo Laptop ABC" , 12000);
+insert into eproduct( name, price ) values ("Acer Laptop ABC" , 12000);
+insert into eproduct( name, price ) values ("DELL Laptop ABC" , 12000);
+insert into eproduct( name, price ) values ("Asus Laptop ABC" , 12000);
+
+
+
+// read data 
+select * from eproduct;
+
+
